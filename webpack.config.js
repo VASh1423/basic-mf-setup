@@ -47,6 +47,7 @@ module.exports = {
     hot: true,
     compress: true,
     port: 9000,
+    devMiddleware: {writeToDisk: true}
   },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
@@ -70,6 +71,7 @@ module.exports = {
       },
     }),
     new HtmlWebpackPlugin({
+      title: 'host',
       template: path.resolve(__dirname, 'src/index.html'),
       filename: 'index.html',
       minify: {
